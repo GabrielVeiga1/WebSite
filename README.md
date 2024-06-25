@@ -16,8 +16,6 @@ Bem-vindo ao meu projeto! Aqui você encontrará uma plataforma desenvolvida par
 
 ## Tecnologias Utilizadas 🛠️
 
-## Tecnologias Utilizadas 🛠️
-
 - **Python:** Linguagem de programação utilizada para a lógica de aplicação.
 - **Flask e SQLAlchemy:** Desenvolvimento ágil e eficiente de aplicações web em Python.
 - **HTML, CSS e JavaScript:** Utilizados para a criação da interface do usuário e interação dinâmica.
