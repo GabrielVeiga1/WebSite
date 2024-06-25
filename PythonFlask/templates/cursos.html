@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% block conteudo %}
+<h1 style="text-align: center;">Lista de Cursos</h1>
+<hr>
+<a href="{{ url_for('cria_curso') }}" class="btn btn-secondary">Adicionar Curso</a>
+<br><br>
+<table class="table table-bordered table-hover">
+    <thead class="table-dark">
+        <tr>  
+            <th scope="col">Nome</th>
+            <th scope="col">Descrição</th>
+            <th scope="col">CH</th>
+            <th scope="col">Ações</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for curso in cursos %}
+        <tr>
+            <td>{{ curso.nome }}</td>
+            <td style="max-width: 700px; overflow-wrap: break-word;">{{ curso.descricao }}</td>
+            <td>{{ curso.ch }}</td>
+            <td>
+                <div class="btn-group">
+                    <a href="{{ curso.id }}/atualiza_curso" class="btn btn-secondary btn-xs">Editar</a>
+                    <a style="margin-left: 3px" href="{{ curso.id }}/remove_curso" onclick="return confirm('Deseja excluir esse registro?')" class="btn btn-danger btn-xs">Excluir</a>
+                </div>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock conteudo %}

@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block conteudo %}
+<h1 style="text-align: center;">Atualizar Curso</h1>
+<hr>
+{%- for mensagem in get_flashed_messages()  %}
+    <div class="alert alert-danger">
+        {{ mensagem }}
+    </div>
+{%- endfor %}
+<form action="{{url_for('atualiza_curso', id=curso.id)}}" method="POST" class="form-control">
+    <label>Nome</label>
+    <input class="form-control" type="text" value="{{curso.nome}}" name="nome" placeholder="Nome do curso" required>
+    <label>Descrição</label>
+    <textarea class="form-control" name="descricao" required>{{curso.descricao}}</textarea>
+    <label>CH</label>
+    <input class="form-control" type="text" value="{{curso.ch}}" name="ch" placeholder="CH do curso" required>
+    <a style="margin-top:7px" href="{{ url_for('lista_cursos') }}" class="btn btn-secondary">Voltar</a>
+    <button style="margin-top: 7px;" class="btn btn-success">Atualizar</button>
+</form>
+{% endblock conteudo %}

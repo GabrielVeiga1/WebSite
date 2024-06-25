@@ -1,0 +1,76 @@
+{% extends 'base.html' %}
+{% block conteudo %}
+
+<h1 style="text-align: center;">Lista de Filmes</h1>
+<hr>
+
+<style>
+.card {
+    margin-bottom: 10px;
+}
+.card-text {
+    max-height: 10.5em;
+    overflow: hidden;
+    position: relative;
+}
+
+.card-text:after {
+    content: '...';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding-left: 20px;
+    background: white; 
+}
+
+.card-text.expanded {
+    max-height: none; 
+}
+
+.card .show-more {
+    display: none;
+    cursor: pointer;
+    color: blue;
+    text-decoration: underline;
+    font-size: 0.9em;
+}
+
+.card .card-text.expanded + .show-more {
+    display: none; 
+}
+
+.card .card-text:not(.expanded) + .show-more {
+    display: inline;
+}
+</style>
+
+<div class="row">
+    {% for filme in filmes %}
+    <div class="col-md-4 mb-4">
+        <div class="card h-100" style="width: 18rem;">
+            <img src="http://image.tmdb.org/t/p/w500{{ filme.backdrop_path }}" class="card-img-top" alt="...">
+            <div class="card-body d-flex flex-column">
+                <h5 class="card-title">{{ filme.title }}</h5>
+                <p class="card-text">{{ filme.overview }}</p>
+                <a class="show-more" onclick="toggleOverview(this)">Ver mais</a>
+                <hr>
+                <h6>Nota Média <span class="badge bg-secondary">{{ filme.vote_average | round(1) }}</span></h6>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+<script>
+function toggleOverview(element) {
+    const cardText = element.previousElementSibling;
+    cardText.classList.toggle('expanded');
+    if (cardText.classList.contains('expanded')) {
+        element.textContent = 'Ver menos';
+    } else {
+        element.textContent = 'Ver mais';
+    }
+}
+</script>
+
+{% endblock conteudo %}

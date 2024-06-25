@@ -1,0 +1,82 @@
+{% extends 'base.html' %}
+{% block conteudo %}
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h1 class="text-center">Sobre o Site</h1>
+            <hr>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+            <h3>O que Fazemos</h3>
+            <p>Meu site foi criado com o objetivo de fornecer o conhecimento que eu aprendi durante meu curso de Dev Web. Aqui estão algumas das principais funcionalidades que o site oferece:</p>
+
+            <ul>
+                <li><strong>Gerenciamento de Cursos:</strong>
+                    <ul>
+                        <li>Listagem de Cursos: Visualize todos os cursos disponíveis com detalhes como nome, descrição e carga horária (CH).</li>
+                        <li>Adicionar Novo Curso: Cadastre novos cursos facilmente através de um formulário simples e direto.</li>
+                        <li>Atualização de Cursos: Edite as informações dos cursos existentes para mantê-los sempre atualizados.</li>
+                        <li>Remoção de Cursos: Exclua cursos que não são mais necessários com apenas um clique.</li>
+                    </ul>
+                </li>
+                <li><strong>Exploração de Filmes:</strong>
+                    <ul>
+                        <li>Filmes Populares: Descubra os filmes mais populares do momento.</li>
+                        <li>Filmes para Crianças: Encontre filmes adequados para crianças.</li>
+                        <li>Filmes por Ano: Explore filmes lançados em anos específicos, como 2010.</li>
+                        <li>Gêneros Específicos: Navegue por filmes de gêneros específicos, como drama.</li>
+                        <li>Atores Específicos: Veja filmes de atores famosos, como Tom Cruise.</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <div class="col-md-6">
+            <h3>Tecnologias Utilizadas</h3>
+            <p>Nosso site é desenvolvido utilizando uma série de tecnologias modernas e robustas, garantindo uma experiência de usuário fluida e eficiente. Aqui estão algumas das principais tecnologias que utilizamos:</p>
+
+            <ul>
+                <li>Flask: Um microframework para Python que nos permite criar aplicações web de forma simples e rápida.</li>
+                <li>SQLite: Um banco de dados leve e eficiente, perfeito para aplicações de pequeno a médio porte.</li>
+                <li>SQLAlchemy: Um ORM (Object Relational Mapper) para facilitar a manipulação do banco de dados.</li>
+                <li>Bootstrap: Um framework front-end que nos ajuda a criar interfaces responsivas e esteticamente agradáveis.</li>
+                <li>APIs Externas: Utilizamos APIs externas para fornecer dados dinâmicos e atualizados, como a API do The Movie Database (TMDb) para informações sobre filmes.</li>
+            </ul>
+
+            <h3>Como Utilizar</h3>
+            <p>Navegue pelo menu superior para acessar as diferentes seções do site. Na seção de cursos, você pode adicionar, visualizar, atualizar e remover cursos. Na seção de filmes, explore diferentes categorias e descubra novos filmes para assistir. Na página inicial, adicione suas frutas favoritas e veja a lista crescer.</p>
+
+            <p>Estamos sempre trabalhando para melhorar nossa plataforma e adicionar novas funcionalidades. Esperamos que você aproveite ao máximo tudo o que oferecemos!</p>
+        </div>
+    </div>
+
+<hr>
+
+    <div class="row" style="text-align:center">
+        <div class="col-md-6 offset-md-3">
+            <div>
+                <h3 class="mt-4">Contato</h3>
+            </div>
+            <ul class="list-unstyled">
+                <li>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
+                        <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1zm13 2.383-4.708 2.825L15 11.105zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741M1 11.105l4.708-2.897L1 5.383z"/>
+                    </svg>
+                    <span style="margin-left: 5px;">gabrielveiga1504@gmail.com</span>
+                </li>
+                <li class="mt-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-whatsapp" viewBox="0 0 16 16">
+                        <path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"/>
+                    </svg>
+                    <span style="margin-left: 5px;">51 99003-6868</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+{% endblock conteudo %}
